@@ -28,9 +28,9 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={{flex: 1}}>
         <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
+          contentInsetAdjustmentBehavior="always"
           style={styles.scrollView}>
           <Header />
           {global.HermesInternal == null ? null : (
@@ -40,7 +40,9 @@ const App = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step UNO</Text>
+              <Text style={{...styles.sectionTitle, color: '#00BCD4'}}>
+                Step UNO
+              </Text>
               <Text style={styles.sectionDescription}>
                 Edit <Text style={styles.highlight}>App.js</Text> to change this
                 screen and then come back to see your edits.
